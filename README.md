@@ -1,7 +1,7 @@
 # Zomato Bangalore Restaurants Classification
 
 ## Description
-  The idea of this project to build a machine learning model to predict if the restaurant will success or not ..
+  The idea of this project is to build a machine learning model to predict if the restaurant will succeed or not ..
 
 ## Tools
   * Python 
