@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zomato Resturant Prediction</title>
+</head>
+<body>
+    <style>
+        body {
+          background-image: url("https://images.pexels.com/photos/952356/pexels-photo-952356.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+          background-position: 200%;
+          background-size: cover;
+        }
+        </style>
+
+
+        <div class="login">
+            <h1>Predict Zomato Restaurant Ratings</h1>
+        
+             <!-- Main Input For Receiving Query to our ML -->
+            <form action="{{ url_for('predict')}}"method="post">
+                <input type="text" name="Online Order" placeholder="Order Online" list="Online Order" required="required" />
+                <datalist id="Online Order">
+                    <option value="" disabled selected hidden>Please Choose...</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                  </datalist>  
+                <input type="text" name="Book Table" placeholder="Book Table" required="required" />
+                <input type="text" name="Votes" placeholder="Votes" required="required" />
+                <input type="text" name="Cost" placeholder="Cost" required="required" />
+                <input type="text" name="Type" placeholder="Type" required="required" />
+                <input type="text" name="City" placeholder="City" required="required" />
+                <input type="text" name="Cuisines" placeholder="Cuisines" required="required" />
+                <input type="text" name="Restaurant Type" placeholder="Restaurant Type" required="required" />
+        
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+        
+           <br>
+           <br>
+           {{ prediction_text }}
+        
+         </div>
+
+</body>
+</html>
